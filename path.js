@@ -11,10 +11,11 @@
 			context.lineTo(350, 150);
             context.lineTo(500, 400);
             context.lineTo(700, 200);
+            context.lineTo(800, 180);
 			//context.arc(90, 50, 30, Math.PI * 7 / 6, Math.PI * 5 / 6);
 			//context.closePath();
 			context.strokeStyle = '#000000';
-			context.lineWidth = 10;
+			context.lineWidth = 50;
 			context.lineJoin = 'round';
 			context.stroke();
 		}
