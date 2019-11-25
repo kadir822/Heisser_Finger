@@ -5,7 +5,19 @@ var context = new AudioContext(),
 
 gainNode.connect(context.destination);
 
-document.addEventListener("mousedown", function(e) {
+// document.addEventListener("mousedown", function(e) {
+//     mousedown = true;
+
+//     oscillator = context.createOscillator();
+//     oscillator.connect(gainNode);
+
+//     calculateFrequencyAndGain(e);
+
+//     oscillator.start(context.currentTime);
+// });
+
+function thereminSound(e){
+
     mousedown = true;
 
     oscillator = context.createOscillator();
@@ -14,7 +26,8 @@ document.addEventListener("mousedown", function(e) {
     calculateFrequencyAndGain(e);
 
     oscillator.start(context.currentTime);
-});
+
+}
 
 document.body.addEventListener("mousemove", function(e) {
     if (mousedown) {
