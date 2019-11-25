@@ -3,29 +3,43 @@
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
 
-        <title>Heißer Finger</title>
+        <title>Heißer Finger The Game</title>
 
     </head>
     <body>
         <script src="../../navigation.js" onload="init(5)"></script>
 
-
         <div id="backBtn">
 
-            <h1>Game</h1>
-
-           
-            <script src="theremin.js"></script>
+            <h1>Play</h1>
+                       
             <a href="index.html" class="backButton" target="_self">Back</a>
 
-
         </div>
-
         
         <div id="drawPath">
             <script src="path.js"></script>
+            <script src="game.js"></script>
+            <script src="theremin.js"></script>
+            <script src="showCoord.js"></script>
 
-            <canvas id="canvas" width="1024" height="600">Beispiel für einen Pfad mit Canvas, der die Form eines Fischs zeichnet.</canvas>
+            <canvas id="canvas" width="1024" height="600" 
+            onmousemove= "showCoords(event)" onmouseout="clearCoor()"></canvas>
+            <h2 id="demo"></h2>
+
+            <canvas id="canvas2" style="position:absolute; top:370px; left:258px" 
+            width="730" height="350" onmouseout= "gameOver(event)"></canvas>
+
+            <canvas id="canvas2" style="position:absolute; top:423px; left:308px" 
+            width="328" height="295" onmouseout= "gameOver(event)"></canvas>
+
+            <canvas id="canvas2" style="position:absolute; top:370px; left:688px" 
+            width="245" height="298" onmouseout= "gameOver(event)"></canvas>
+
+            
+
+            
+            
         </div>
     </body>
 </html>

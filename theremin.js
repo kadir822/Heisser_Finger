@@ -52,11 +52,9 @@ function calculateFrequencyAndGain(e) {
 }
 
 // for error handling when mouse leaves viewport
-document.addEventListener("mouseleave", function (event) {
+document.addEventListener("mouseleave", function (e) {
 
-    if (event.clientY <= 0 || event.clientX <= 0
-        || (event.clientX >= window.innerWidth
-        || event.clientY >= window.innerHeight)) {
+    if (e.clientY <= 184 || e.clientX <= 439 || (e.clientX >= 1464 || e.clientY >= 785)) {
         mousedown = false;
         if (oscillator) {
             oscillator.stop(context.currentTime);
