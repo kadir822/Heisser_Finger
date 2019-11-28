@@ -12,7 +12,7 @@
 				context.lineTo(500, 150);		//context.lineTo(500, 400);
 				context.lineTo(500, 450);		//context.lineTo(700, 200);
 				context.lineTo(800, 450);		//context.lineTo(800, 180);
-				context.lineTo(800, 125);	
+				context.lineTo(800, 125);
 				context.strokeStyle = '#000000';
 				context.lineWidth = 50;
 				context.lineJoin = 'round';
@@ -24,6 +24,5 @@
 		});
 	}
 	(
-		
 	)
 );

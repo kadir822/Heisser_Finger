@@ -3,6 +3,7 @@ var context = new AudioContext(),
     mousedown = false,
     gainNode = context.createGain();
 
+
 gainNode.connect(context.destination);
 
 // document.addEventListener("mousedown", function(e) {
@@ -18,7 +19,8 @@ gainNode.connect(context.destination);
 
 function thereminSound(e){
 
-    mousedown = true;
+    if (start) {
+        mousedown = true;
 
     oscillator = context.createOscillator();
     oscillator.connect(gainNode);
@@ -26,34 +28,35 @@ function thereminSound(e){
     calculateFrequencyAndGain(e);
 
     oscillator.start(context.currentTime);
+    }
+
 
 }
 
-document.body.addEventListener("mousemove", function(e) {
-    if (mousedown) {
+function moveTheremin(e){
+    mousedown = true;
+    if (mousedown && start) {
         calculateFrequencyAndGain(e);
     }
-});
+}
 
-document.addEventListener("mouseup", function(e) {
+function thereminStop(e){
     mousedown = false;
+    start  = false;
+    death = true;
 
     if (oscillator) {
         oscillator.stop(context.currentTime);
         oscillator.disconnect();
+        location.href = 'gameOver.html';
     }
-});
+}
 
 function calculateFrequencyAndGain(e) {
     var maxFrequency = 2000,
         minFrequency = 20,
         maxGain = 1,
         minGain = 0;
-
-    //oscillator.frequency.value =
-    //    ((e.clientX / window.innerWidth) * maxFrequency) + minFrequency;
-    //gainNode.gain.value =
-    //    1 - ((e.clientY / window.innerHeight) * maxGain) + minGain;
 
     // fix for click sound bug:
     oscillator.frequency.setTargetAtTime(
@@ -63,15 +66,3 @@ function calculateFrequencyAndGain(e) {
         1 - ((e.clientY / window.innerHeight) * maxGain)
         + minGain, context.currentTime, 0.01);
 }
-
-// for error handling when mouse leaves viewport
-document.addEventListener("mouseleave", function (e) {
-
-    if (e.clientY <= 184 || e.clientX <= 439 || (e.clientX >= 1464 || e.clientY >= 785)) {
-        mousedown = false;
-        if (oscillator) {
-            oscillator.stop(context.currentTime);
-            oscillator.disconnect();
-        }
-    }
-});
