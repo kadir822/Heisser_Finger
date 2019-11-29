@@ -1,11 +1,14 @@
 var start=false;
 var death = false;
 var play = false;
+const pat = document.getElementById('drawPath');
+const gameField = document.getElementById('gameField');
+
 
 function startGame(event){
         start = true;
-
-        document.getElementById("state").innerHTML = start;
+        //document.getElementById("state").innerHTML = start;
+        
 }
 
 function winGame(event){
@@ -13,16 +16,3 @@ function winGame(event){
                 location.href = 'goal.html';
         }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
