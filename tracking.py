@@ -28,6 +28,6 @@ while True:
     key = cv2.waitKey(1)
     if key == :
         break
-        
+
 cap.release()
 cv2.destroyAllWindows()
