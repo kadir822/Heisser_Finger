@@ -17,30 +17,30 @@
 
         </div>
 
-        <div id="drawPath">
+        <div>
             <script src="path.js"></script>
             <script src="game.js"></script>
             <script src="theremin.js"></script>
             <script src="showCoord.js"></script>
 
                 <canvas class="gameFieldBorder" id="gameFieldBorder" width="1024" height="600"
-                onmousemove= "showCoords(event)" onmouseout="clearCoor()" ></canvas>
+                 onmouseout="clearCoor()"  onmousemove="thereminStop(event)"></canvas>
 
                 <canvas id="gameField" class="gameField" style="position:absolute; top:370px; left:533px"
                 width="730" height="350"  onmousemove="moveTheremin(event)"
-                onmouseover="thereminSound(event)" onmouseleave = "thereminStop(event)"></canvas>
+                onmouseover="thereminSound(event)" ></canvas>
 
                 <canvas id="leftBlock" class="leftBlock" style="position:absolute; top:423px; left:585px"
-                width="328" height="295"></canvas>
+                width="328" height="297" onmousemove="thereminStop(event)"></canvas>
 
                 <canvas class="rightBlock" id="rightBlock" style="position:absolute; top:370px; left:966px"
-                width="245" height="298" ></canvas>
+                width="255" height="315"  onmousemove="thereminStop(event)"></canvas>
 
-                <canvas class="start" style="position:absolute; top:718px; left:535px"
-                width="48" height="48" onmouseover="startGame(event)"></canvas>
+                <canvas class="start" style="position:absolute; top:721px; left:533px"
+                width="50" height="48" onmouseover="startGame(event)"></canvas>
 
-                <canvas class="goal" id="goal" style="position:absolute; top:325px; left:1215px"
-                width="48" height="48" onmouseover="winGame(event)"></canvas>
+                <canvas class="goal" id="goal" style="position:absolute; top:321px; left:1222px"
+                width="41" height="48" onmouseover="winGame(event)"></canvas>
 
                 <p id="state"></p>
 

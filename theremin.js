@@ -22,15 +22,13 @@ function thereminSound(e){
     if (start) {
         mousedown = true;
 
-    oscillator = context.createOscillator();
-    oscillator.connect(gainNode);
+        oscillator = context.createOscillator();
+        oscillator.connect(gainNode);
 
-    calculateFrequencyAndGain(e);
+        calculateFrequencyAndGain(e);
 
-    oscillator.start(context.currentTime);
+        oscillator.start(context.currentTime);
     }
-
-
 }
 
 function moveTheremin(e){
