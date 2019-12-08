@@ -23,6 +23,7 @@ a:link, a:visited {
     display: inline-block;
 }
 
+
 a.backButton{
     margin-left: 0%;
     background-color: #1a1717;
@@ -78,4 +79,12 @@ canvas.rightBlock{
     border: 1px solid #333;
 
     background-color: rgb(143, 34, 34);
+}
+
+#player{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: rgb(0, 4, 255);
+    z-index: 10;
 }
