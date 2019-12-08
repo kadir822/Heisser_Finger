@@ -1,33 +1,31 @@
 html, body {
     height: 100%;
-    background: #a78660;
+    background: #ffffff;
     text-align: center;
-    color: #e0d336;
+    color: #000000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 h1 {
     user-select: none;
-    font-size: 5em;
+    font-size: 90px;
+    
 }
-
-h3{
-    position: relative;
-    margin: -10%;
-    margin-left: -68.5%
-}
-a:link, a:visited {
-    color: white;
+a:link, a:visited { 
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 15px 25px;
     text-align: center;
-    text-decoration: none;
+    text-decoration:none;
     display: inline-block;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius:30px; 
+
 }
-
-
 a.backButton{
     margin-left: 0%;
-    background-color: #1a1717;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 15px 25px;
     text-align: center;
     text-decoration: none;
@@ -37,15 +35,14 @@ a.backButton{
 a.resetButton{
 
     margin-left: 0%;
-    background-color: #1a1717;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 15px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    
 }
-
-
 
 #drawPath{
     border:1px solid #333;
@@ -70,15 +67,15 @@ canvas.start{
 }
 
 canvas.leftBlock{
-    border: 1px solid #333;
+    border: 1px solid rgb(255, 255, 255);
 
-    background-color: rgb(143, 34, 34);
+    background-color: rgb(255, 255, 255);
 }
 
 canvas.rightBlock{
-    border: 1px solid #333;
+    border: 1px solid rgb(255, 255, 255);
 
-    background-color: rgb(143, 34, 34);
+    background-color: rgb(255, 255, 255);
 }
 
 #player{
